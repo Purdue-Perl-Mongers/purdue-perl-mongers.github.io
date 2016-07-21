@@ -1,0 +1,24 @@
+# my .perltidyrc config file
+  -b           # old to .bak, tidied version to filename
+  #-ce         # cuddled else
+  -ci=2        # continue indent
+  -i=4         # indent 4 characters
+  -l=90        # line width
+  -lp          # line with perens
+  -bar         # opening braces on right
+  -nsbl        # opening sub braces on right
+  -icb         # indent comment blocs
+  -vt=1        # vertical tight
+  -vtc=2       # vertical tight
+  -cti=3       # closing indent
+  -sot         # stack opening tokens
+  -sts         # semicolon space
+  -sfs         # semicolon space in for loop definition
+  
+  -bt=0        # braces not tight
+  -pt=0        # parens not tight
+  -sbt=0       # square brackets not tight
+  --block-brace-tightness=0
+  
+  -nolq        # don't indent long quoted strings
+  

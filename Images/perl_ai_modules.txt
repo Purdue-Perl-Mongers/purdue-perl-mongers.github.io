@@ -1,0 +1,12 @@
+https://metacpan.org/pod/Algorithm::Kmeanspp
+https://metacpan.org/pod/Algorithm-Bayesian
+https://metacpan.org/pod/Algorithm::NaiveBayes
+
+https://metacpan.org/pod/Net::Bluetooth
+
+http://blog.retep.org/2012/06/18/getting-gps-to-work-on-a-raspberry-pi/
+http://astrobeano.blogspot.com/2012/10/pharosmicrosoft-gps-360-on-raspberry-pi.html
+
+https://learn.sparkfun.com/tutorials/ir-communication
+http://www.iguanaworks.net/products/usb-ir-transceiver/
+http://www.irdroid.com/irdroid-usb-ir-transceiver/

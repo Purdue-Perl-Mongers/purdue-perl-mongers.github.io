@@ -1,0 +1,22 @@
+Perl and Twitter, or Data and what to do with it
+
+1) Perl Tools 
+
+    Net::Twitter 
+    twitter.pl
+
+2) Favorites
+
+    "Oh baby, you know what I like"
+
+    Need Repo
+        Code
+        SQL Schema
+
+3) Favorites Lookup Web Tool
+
+    Need Repo
+
+4) Bayes
+
+    Need Repo
