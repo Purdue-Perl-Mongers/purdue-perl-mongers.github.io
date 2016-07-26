@@ -8,65 +8,8 @@
   <!-- CSS -->
   <link href="./css/bootstrap.css" rel="stylesheet">
   <link href="./css/sticky-footer.css" rel="stylesheet">
-  <!-- <link href="./css/bootstrap-theme.css" rel="stylesheet"> -->
-  <style>
-    body { 
-        background-color: #ffffff ; 
-        font-size: 2em ;
-        font-family: "Times New Roman", Times, serif;
-        }
-    #logo {
-        height: 40px ;
-        width:  40px ;
-        }
-    .navbar { 
-        font-family: 'Consolas' , monospace ;
-        background-color: #815e08;
-        color: #000 !important ;
-        }
-    .navbar-nav li a { 
-        color: #ddd !important ;
-        }
-    .navbar-nav li a:hover { 
-        color: #aaa !important ;
-        }
-    .navbar-brand { 
-        padding: 5px !important ;
-        }
-    .navbar-toggle .icon-bar{
-        background-color: white !important ; 
-        }
-    .main {
-        color: #555;
-        }
-    b , strong {
-        font-family: 'Gill Sans MT' , Arial , sans-serif ;
-        color: #000;
-        }
-    h1 , h2 , h3 , h4 ,
-    .main a {
-        color: #815e08;
-        font-weight: 900 ;
-        font-family: 'Gill Sans MT' , Arial , sans-serif ;
-        }
-    .main a:visited ,
-    .main a:active {
-        color: #b1946c ;
-        }
-    .main p {
-        padding-left: 20px ;
-        text-indent: -10px ;
-        }
-    #image  {
-        background-attachment: fixed ;
-        background-color: black;
-        background-image: url("/Images/perl_on_phone.jpg") ;
-        background-position: center ;
-        background-size: cover ;
-        height: 20em;
-        width: 100% ;
-        }
-  </style>
+  <link href="./css/purduepm.css" rel="stylesheet">
+  <link href="./css/events.css" rel="stylesheet">
   <!-- CSS -->
 
 <!--
@@ -103,7 +46,9 @@
             <li> <a href="#events">   Events  </a></li>
             <li> <a href="#contact">  Contact </a></li>
             <li> <a target="_blank" href="https://www.meetup.com/Greater-Lafayette-Open-Source-Symposium/">  Meetup </a></li>
+                <!--
             <li> <a target="_blank" href="https://twitter.com/PurduePM">  Twitter </a></li>
+                -->
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -111,7 +56,7 @@
 
 <!-- HEADER -->
 
-  <div id="image">&nbsp; </div>
+<div id="image" class="spacer">&nbsp; </div>
     <a name="home">&nbsp;</a>
 <div class="container main">
   <h1>Purdue Perl Mongers</h1>
@@ -127,44 +72,57 @@
       Membership in our Perl Users Group is free and open to anyone. People at all
       levels of programmming experience are welcome and encouraged to attend.
     </p> 
+  </div>
+  <div id="events" class="spacer">&nbsp; </div>
+  <div class="container main">
     <a name="events">&nbsp;</a>
     <h2>Events</h2>
     <p>
       We have meetings once a month on the second Wednesday of the month, usually 
       involving a presentation dealing with technical topics. In the past, we've 
-      covered topics relating to <b>Javascript</b>,  
-      <b>HTML Mail</b>, <b>Selenium</b>, and <b>Go</b>, as well as <b>Perl</b>.
+      covered topics relating to Javascript,  
+      HTML Mail, Selenium, and Go, as well as Perl.
+      <br>
     </p>
-    <p>
-      Our next meeting is <strong>Wednesday, August 10, 2016 at 6pm</strong> in 
-      <a href="http://matchboxstudio.org/">MatchBOX Coworking Studio </a> 
-      (<a href="https://www.google.com/maps/place/MatchBOX+Coworking+Studio/@40.4170924,-86.8906111,17z/data=!4m7!1m4!3m3!1s0x88131d44ef6b7955:0xe49b7b0564b09195!2s7+S+6th+St,+Lafayette,+IN+47901!3b1!3m1!1s0x0000000000000000:0xdc61422facb3b4ba">map</a>). 
-      <a href="http://www.meetup.com/Greater-Lafayette-Open-Source-Symposium/">Please RSVP</a>.
-    </p>
-    <p>
-      <b>Ken</b> of <a href="www.spensatech.com/">SpensaTech</a> has worked with 
-      <a href="opencv.org">OpenCV</a>, and will be showing some examples of it's use. 
-      <b>OpenCV</b> has interfaces with many languages and supports Windows, 
-      Linux, Mac, iOS and Android, so it should be applicable to your stack of 
-      choice, so feel free to come even if you aren't a Perl person. 
-    </p>
-    <p>
-      Beginning at 7:30pm there is <strong>GLOSSY Open Source Food & Beer & Chat</strong>
-      at <a href="http://lafbrew.com/">Lafayette Brewing Company</a> 
-      (<a href="https://www.google.com/maps/place/Lafayette+Brewing+Company/@40.419364,-86.8899934,17z/data=!3m1!4b1!4m2!3m1!1s0x88131d457687a07b:0x59e8841c805d39c5">map</a>).
-    </p> 
+      <ul class="event-list">
+          <li>
+          <time datetime="2016-08-10">
+              <span class="day">   10 </span>
+              <span class="month"> Aug </span>
+              <span class="year">  2016 </span>
+              <span class="time">  6pm </span>
+          </time>
+          <div class="info">
+              <h2 class="title"> OpenCV </h2>
+              <p class="desc">
+              <b>Ken</b> of <a href="www.spensatech.com/">SpensaTech</a> 
+                has worked with <a href="opencv.org">OpenCV</a>, and will 
+                be showing some examples of it's use. <b>OpenCV</b> has 
+                interfaces with many languages and supports Windows, Linux, 
+                Mac, iOS and Android, so it should be applicable to your 
+                stack of choice, so feel free to come even if you aren't a 
+                Perl person. 
+              </p>
+          </div>
+          </li>
+      </ul>
+    <br>
+  </div>
+  <div id="contact" class="spacer">&nbsp; </div>
+  <div class="container main">
     <a name="contact">&nbsp;</a>
     <h2>Contact Us</h2>
+    <p class="center">
+      <a href="https://twitter.com/PurduePM">
+        <img class="socmed" alt="Twitter" src="/Icons/Twitter.png"></a>
+      <a href="https://plus.google.com/communities/100780979348959606696">
+        <img class="socmed" alt="Google+" src="/Icons/Google+.png"></a>
+      <a href="https://github.com/Purdue-Perl-Mongers">
+        <img class="socmed" alt="Github" src="/Icons/Github.png"></a>
+    </p>
     <p>
       Sign up for the <a href="http://mail.pm.org/mailman/listinfo/purdue-pm">mailing list</a> 
       to be kept informed of upcoming events.
-    </p>
-    <p>
-      Follow <a href="https://twitter.com/PurduePM">@PurduePM on Twitter</a> 
-      for group announcements, plus links relating to Perl, Programming, Technology and Purdue.
-    </p>
-    <p> 
-      We also have <a href="https://plus.google.com/communities/100780979348959606696">a Google+ Community</a>.
     </p>
     <p> 
       If you have questions about the organization or about this page, contact <a href="http://pm.purdue.org/Wiki/wiki.pl/DaveJacoby">Dave Jacoby</a>.  
@@ -172,6 +130,7 @@
 </div>
 
 <!-- FOOTER -->
+<div id="footer-top"></div>
 <footer class="footer">
   <div class="container">
       <div class="text-muted">
