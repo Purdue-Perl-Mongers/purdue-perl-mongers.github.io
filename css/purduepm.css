@@ -1,0 +1,85 @@
+body { 
+    background-color: #ffffff ; 
+    font-size: 2em ;
+    font-family: "Times New Roman", Times, serif;
+    }
+img.socmed {
+    height: 40px ;
+    width:  40px ;
+    }
+#logo {
+    height: 40px ;
+    width:  40px ;
+    }
+.navbar { 
+    font-family: 'Consolas' , monospace ;
+    background-color: #815e08;
+    color: #000 !important ;
+    }
+.navbar-nav li a { 
+    color: #ddd !important ;
+    }
+.navbar-nav li a:hover { 
+    color: #aaa !important ;
+    }
+.navbar-brand { 
+    padding: 5px !important ;
+    }
+.navbar-toggle .icon-bar{
+    background-color: white !important ; 
+    }
+.main {
+    color: #555;
+    }
+.center {
+    /*text-align: center ;*/
+    }
+b , strong {
+    font-family: 'Gill Sans MT' , Arial , sans-serif ;
+    color: #000;
+    }
+h1 , h2 , h3 , h4 ,
+.main a {
+    color: #815e08;
+    font-weight: 900 ;
+    font-family: 'Gill Sans MT' , Arial , sans-serif ;
+    }
+.main a:visited ,
+.main a:active {
+    color: #b1946c ;
+    }
+.main p {
+    padding-left: 20px ;
+    /*text-indent: -10px ;*/
+    }
+.main  {
+    }
+#image  {
+    background-attachment: fixed ;
+    background-color: black;
+    background-image: url("/Images/perl_on_phone.jpg") ;
+    background-position: center ;
+    background-size: cover ;
+    height: 25em;
+    width: 100% ;
+    }
+#events  {
+    background-attachment: fixed ;
+    background-color: black;
+    background-image: url("/Images/perlbrew.jpg") ;
+    background-position: center ;
+    background-size: cover ;
+    height: 25em;
+    width: 100% ;
+    }
+#contact  {
+    background-attachment: fixed ;
+    background-color: black;
+    background-image: url("/Images/documentation_is_coding.jpg") ;
+    background-position: center ;
+    background-size: cover ;
+    height: 25em;
+    width: 100% ;
+    }
+
+

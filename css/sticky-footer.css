@@ -14,7 +14,9 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 70px;
-  background-color: #000;
+  color: #815e08;
+  background-color: white ;
+  background-color: black ;
   font-family: 'Gill Sans', 'Gill Sans MT' , Arial , sans-serif ;
   text-align: center ;
 }
@@ -29,6 +31,7 @@ body > .container {
 }
 .container .text-muted {
   margin: 20px 0;
+  color: #815e08;
 }
 
 .footer > .container {
@@ -39,3 +42,17 @@ body > .container {
 code {
   font-size: 80%;
 }
+
+/* Need to integrate this with a fuller concept */
+#footer-top {
+/*  color: #fff;
+  background-color: #815e08 ;
+  padding: 2px 0 2px;
+  height: 2px;
+  transform:          rotate(2deg) scale(1) skew(0deg) translate(0px);
+  -webkit-transform:  rotate(2deg) scale(1) skew(0deg) translate(0px);
+  -moz-transform:     rotate(2deg) scale(1) skew(0deg) translate(0px);
+  -o-transform:       rotate(2deg) scale(1) skew(0deg) translate(0px);
+  -ms-transform:      rotate(2deg) scale(1) skew(0deg) translate(0px);*/
+}
+
