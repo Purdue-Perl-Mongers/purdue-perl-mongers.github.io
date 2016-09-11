@@ -1,7 +1,9 @@
 body { 
     background-color: #ffffff ; 
     font-size: 2em ;
-    font-family: "Times New Roman", Times, serif;
+    /*I like serif for paper and sans-serif for Web*/
+    /*font-family: "Times New Roman", Times, serif;*/
+    font-family: Helvetica, Arial, sans-serif;
     }
 img.socmed {
     height: 40px ;
