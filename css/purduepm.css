@@ -1,7 +1,11 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
+
 body { 
     background-color: #ffffff ; 
     font-size: 2em ;
-    font-family: "Times New Roman", Times, serif;
+    /*I like serif for paper and sans-serif for Web*/
+    /*font-family: "Times New Roman", Times, serif;*/
+    font-family: Helvetica, Arial, sans-serif;
     }
 img.socmed {
     height: 40px ;
@@ -12,7 +16,7 @@ img.socmed {
     width:  40px ;
     }
 .navbar { 
-    font-family: 'Consolas' , monospace ;
+    font-family: 'Montserrat' , 'sans serif' ; 
     background-color: #815e08;
     color: #000 !important ;
     }
@@ -35,14 +39,14 @@ img.socmed {
     /*text-align: center ;*/
     }
 b , strong {
-    font-family: 'Gill Sans MT' , Arial , sans-serif ;
+    font-family: 'Montserrat' , 'sans serif' ; 
     color: #000;
     }
 h1 , h2 , h3 , h4 ,
 .main a {
     color: #815e08;
     font-weight: 900 ;
-    font-family: 'Gill Sans MT' , Arial , sans-serif ;
+    font-family: 'Montserrat' , 'sans serif' ; 
     }
 .main a:visited ,
 .main a:active {
