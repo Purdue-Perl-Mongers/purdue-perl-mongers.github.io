@@ -61,7 +61,7 @@ h1 , h2 , h3 , h4 ,
 #image  {
     background-attachment: fixed ;
     background-color: black;
-    background-image: url("/Images/perl_on_phone.jpg") ;
+    background-image: url("/Images/perl_on_phone_1024.jpg") ;
     background-position: center ;
     background-size: cover ;
     height: 25em;
@@ -70,7 +70,7 @@ h1 , h2 , h3 , h4 ,
 #events  {
     background-attachment: fixed ;
     background-color: black;
-    background-image: url("/Images/perlbrew.jpg") ;
+    background-image: url("/Images/perlbrew_1024.jpg") ;
     background-position: center ;
     background-size: cover ;
     height: 25em;
@@ -79,7 +79,7 @@ h1 , h2 , h3 , h4 ,
 #contact  {
     background-attachment: fixed ;
     background-color: black;
-    background-image: url("/Images/documentation_is_coding.jpg") ;
+    background-image: url("/Images/documentation_is_coding_1024.jpg") ;
     background-position: center ;
     background-size: cover ;
     height: 25em;
