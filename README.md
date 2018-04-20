@@ -1,6 +1,6 @@
 # WEBSITE
 
-The Website for Purdue Perl Mongers, using BootStrap to make a more modern site
+The Website for [Purdue Perl Mongers](https://purdue-perl-mongers.github.io/), using BootStrap to make a more modern site
 
 ## TODO
 
