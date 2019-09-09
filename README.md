@@ -11,3 +11,4 @@ that dynamically-generated via AJAX from the Meetup or statically with templates
 ## CHANGELOG
 
 20170209 DAJ Removed Intro To R, Added Gizmo's Async talk
+20190909 DAJ Removed Google Plus link.
