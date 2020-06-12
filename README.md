@@ -10,5 +10,9 @@ that dynamically-generated via AJAX from the Meetup or statically with templates
 
 ## CHANGELOG
 
+```text
 20170209 DAJ Removed Intro To R, Added Gizmo's Async talk
 20190909 DAJ Removed Google Plus link.
+20200612 DAJ Moved our primary (only) branch to `trunk`, which might become
+             the default for Git and related tools in the future
+```
