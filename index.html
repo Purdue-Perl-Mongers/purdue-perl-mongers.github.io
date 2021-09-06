@@ -52,9 +52,7 @@
     ##   ## ## ## ## ## ## ## ## ##    ## ##  ##    ## ##
      ###  ###  ## ## ## ## ## ##  #### ## ##   ## ###  ##
 
-I hope to automate the generation of this page. I am not there yet. DAJ 20170510
-
-Testing git push stuff JRK 20170527T1624 EDT
+This is automated with Vue, munging a copy of the Meetup Event JSON 
 
     -->
   </head>
@@ -137,83 +135,29 @@ Testing git push stuff JRK 20170527T1624 EDT
         and Go, as well as Perl.
         <br />
       </p>
-      <ul class="event-list">
-        <!-- INSERT EVENTS BELOW THIS LINE -->
 
-        <li>
-          <time datetime="2021-08-11">
-            <span class="day"> 11 </span>
-            <span class="month"> Aug </span>
-            <span class="year"> 2021 </span>
-            <span class="time"> 5:30 PM </span>
+      <!-- THIS IS VUE -->
+      <ul class="event-list" id="app">
+        <li v-for="event in data">
+          <time datetime="{{event.year}}-{{event.month0}}-{{event.date}}">
+            <span class="day"> {{ event.dom }} </span>
+            <span class="month"> {{ event.monthStr }} </span>
+            <span class="year"> {{ event.year }} </span>
+            <span class="time"> {{ event.timeStr }} </span>
           </time>
           <div class="info">
             <h2 class="title">
-              <a
-                href="https://www.meetup.com/hacklafayette/events/jdxwsrycclbpb/"
-              >
-                Github Actions — Purdue Perl Mongers
-              </a>
+              <a v-bind:href="event.link" target="_blank"> {{ event.name }} </a>
             </h2>
             <p class="desc">
-              Derrick will introduce us to GitHub Actions, which help you
-              automate your projects
-              <br />
-              5:30 PM in Online event
+              {{ event.description }} <br />
+              {{ event.timeStr }} in {{ event.venue.name }}
             </p>
           </div>
         </li>
-
-        <li>
-          <time datetime="2021-08-22">
-            <span class="day"> 22 </span>
-            <span class="month"> Aug </span>
-            <span class="year"> 2021 </span>
-            <span class="time"> 1:00 PM </span>
-          </time>
-          <div class="info">
-            <h2 class="title">
-              <a
-                href="https://www.meetup.com/hacklafayette/events/rczplsycclbdc/"
-              >
-                Open Source Coffee & Chat
-              </a>
-            </h2>
-            <p class="desc">
-              We're opening up for in-person Coffee &amp; Chat again. We'll be
-              meeting outside. Drink coffee (or whatever beverage suits your
-              taste) and talk about open source (or whatever topics come up).
-              <br />
-              1:00 PM in Fuel at Five Points
-            </p>
-          </div>
-        </li>
-
-        <li>
-          <time datetime="2021-09-08">
-            <span class="day"> 8 </span>
-            <span class="month"> Sep </span>
-            <span class="year"> 2021 </span>
-            <span class="time"> 5:30 PM </span>
-          </time>
-          <div class="info">
-            <h2 class="title">
-              <a
-                href="https://www.meetup.com/hacklafayette/events/jdxwsryccmblb/"
-              >
-                TBA — Purdue Perl Mongers
-              </a>
-            </h2>
-            <p class="desc">
-              Topic TBA.
-              <br />
-              5:30 PM in Online event
-            </p>
-          </div>
-        </li>
-
-        <!-- INSERT EVENTS ABOVE THIS LINE -->
       </ul>
+      <!-- THIS IS VUE -->
+
       <br />
     </div>
     <div id="contact" class="spacer">&nbsp;</div>
@@ -254,8 +198,75 @@ Testing git push stuff JRK 20170527T1624 EDT
     <!-- FOOTER -->
 
     <!-- Javascript -->
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <!-- Javascript -->
   </body>
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+  <script>
+    const app = new Vue({
+      el: "#app",
+      data: {
+        months: [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec",
+        ],
+        data: [{
+          "name":"Javascript Seems To Be Unavailable",
+          "description":"Or you have it turned off",
+          "link":"https://meetup.com/hacklafayette"
+        }],
+      },
+      created() {
+        fetch("./hacklafayette.json")
+          .then((response) => response.json())
+          .then((json) => {
+            this.data = json;
+            this.data.length = 4;
+            for (let i = 0; i < this.data.length; i++) {
+              this.data[i].description = this.data[i].description.replace(
+                /<\/?p>/g,
+                ""
+              );
+              this.data[i].description = this.data[i].description.replace(
+                /\&amp;/g,
+                "&"
+              );
+              let time = this.data[i].time;
+              time /= 1000;
+              let date = new Date(0);
+              date.setUTCSeconds(time);
+              this.data[i].dateObj = date;
+              this.data[i].dateString = date.toDateString();
+              this.data[i].year = date.getFullYear();
+              this.data[i].monthStr = this.months[date.getMonth()];
+              this.data[i].month = date.getMonth();
+              this.data[i].month0 = date.getMonth().toString().padStart(2, "0");
+              this.data[i].dom = date.getDate();
+              let realHour = date.getHours();
+              let hour = date.getHours() % 12;
+              if (hour === 0) {
+                hour = 12;
+              }
+              let ampm = "pm";
+              if (realHour > 0 && realHour < 13) {
+                ampm = "am";
+              }
+              let minutes = date.getMinutes().toString().padStart(2, "0");
+              this.data[i].timeStr = [hour, ":", minutes, ampm].join("");
+            }
+          });
+      },
+    });
+  </script>
 </html>
