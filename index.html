@@ -150,8 +150,12 @@ This is automated with Vue, munging a copy of the Meetup Event JSON
               <a v-bind:href="event.link" target="_blank"> {{ event.name }} </a>
             </h2>
             <p class="desc">
-              {{ event.description }} <br /> <br />
-              [{{ event.timeStr }} in {{event.venue.name | uppercase}}]
+              {{ event.description }}
+
+              <br />
+              <br />
+
+              {{ event.timeStr }} in {{ event.venue.name }}
             </p>
           </div>
         </li>
@@ -221,11 +225,13 @@ This is automated with Vue, munging a copy of the Meetup Event JSON
           "Nov",
           "Dec",
         ],
-        data: [{
-          "name":"Javascript Seems To Be Unavailable",
-          "description":"Or you have it turned off",
-          "link":"https://meetup.com/hacklafayette"
-        }],
+        data: [
+          {
+            name: "Javascript Seems To Be Unavailable",
+            description: "Or you have it turned off",
+            link: "https://meetup.com/hacklafayette",
+          },
+        ],
       },
       created() {
         fetch("./hacklafayette.json")
