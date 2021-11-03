@@ -150,8 +150,8 @@ This is automated with Vue, munging a copy of the Meetup Event JSON
               <a v-bind:href="event.link" target="_blank"> {{ event.name }} </a>
             </h2>
             <p class="desc">
-              {{ event.description }} <br />
-              {{ event.timeStr }} in {{ event.venue.name }}
+              {{ event.description }} <br /> <br />
+              {{ event.timeStr }} in {{ event.venue.name | uppercase }}
             </p>
           </div>
         </li>
