@@ -238,40 +238,41 @@ This is automated with Vue, munging a copy of the Meetup Event JSON
         fetch("./hacklafayette.json")
           .then((response) => response.json())
           .then((json) => {
-            this.data = json;
-            this.data.length = 4;
-            for (let i = 0; i < this.data.length; i++) {
-              this.data[i].description = this.data[i].description.replace(
-                /<\/?p>/g,
-                ""
-              );
-              this.data[i].description = this.data[i].description.replace(
-                /\&amp;/g,
-                "&"
-              );
-              let time = this.data[i].time;
-              time /= 1000;
-              let date = new Date(0);
-              date.setUTCSeconds(time);
-              this.data[i].dateObj = date;
-              this.data[i].dateString = date.toDateString();
-              this.data[i].year = date.getFullYear();
-              this.data[i].monthStr = this.months[date.getMonth()];
-              this.data[i].month = date.getMonth();
-              this.data[i].month0 = date.getMonth().toString().padStart(2, "0");
-              this.data[i].dom = date.getDate();
-              let realHour = date.getHours();
-              let hour = date.getHours() % 12;
-              if (hour === 0) {
-                hour = 12;
-              }
-              let ampm = "pm";
-              if (realHour > 0 && realHour < 13) {
-                ampm = "am";
-              }
-              let minutes = date.getMinutes().toString().padStart(2, "0");
-              this.data[i].timeStr = [hour, ":", minutes, ampm].join("");
-            }
+            console.log( 'THIS FAR' )
+            // this.data = json;
+            // this.data.length = 4;
+            // for (let i = 0; i < this.data.length; i++) {
+            //   this.data[i].description = this.data[i].description.replace(
+            //     /<\/?p>/g,
+            //     ""
+            //   );
+            //   this.data[i].description = this.data[i].description.replace(
+            //     /\&amp;/g,
+            //     "&"
+            //   );
+            //   let time = this.data[i].time;
+            //   time /= 1000;
+            //   let date = new Date(0);
+            //   date.setUTCSeconds(time);
+            //   this.data[i].dateObj = date;
+            //   this.data[i].dateString = date.toDateString();
+            //   this.data[i].year = date.getFullYear();
+            //   this.data[i].monthStr = this.months[date.getMonth()];
+            //   this.data[i].month = date.getMonth();
+            //   this.data[i].month0 = date.getMonth().toString().padStart(2, "0");
+            //   this.data[i].dom = date.getDate();
+            //   let realHour = date.getHours();
+            //   let hour = date.getHours() % 12;
+            //   if (hour === 0) {
+            //     hour = 12;
+            //   }
+            //   let ampm = "pm";
+            //   if (realHour > 0 && realHour < 13) {
+            //     ampm = "am";
+            //   }
+            //   let minutes = date.getMinutes().toString().padStart(2, "0");
+            //   this.data[i].timeStr = [hour, ":", minutes, ampm].join("");
+            // }
           });
       },
     });
