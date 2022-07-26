@@ -235,12 +235,12 @@ This is automated with Vue, munging a copy of the Meetup Event JSON
         ],
       },
       created() {
-        console.log( 'THIS FAR');
+        console.log( 'THIS FAR 1');
         fetch("./hacklafayette.json")
           .then((response) => response.json())
           .then((json) => {
             this.data = json;
-            console.log( 'THIS FAR');
+            console.log( 'THIS FAR 2');
             console.dir(this.data);
 
             // this.data.length = 4;
