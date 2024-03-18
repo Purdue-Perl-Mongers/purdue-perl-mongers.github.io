@@ -14,7 +14,6 @@
       name="twitter:description"
       content="Site for Purdue Perl Mongers, Indiana's oldest Perl User Group."
     />
-
     <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
     <meta http-equiv="X-Clacks-Overhead" content="GNU Kip Hampton" />
     <meta http-equiv="X-Clacks-Overhead" content="GNU Douglas Adams" />
@@ -77,7 +76,11 @@ This is automated with Vue, munging a copy of the Meetup Event JSON
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="./">
-            <img id="logo" alt="Purdue Perl Mongers" src="/Images/perl_logo.white.png" />
+            <img
+              id="logo"
+              alt="Purdue Perl Mongers"
+              src="/Images/perl_logo.white.png"
+            />
           </a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
@@ -235,12 +238,12 @@ This is automated with Vue, munging a copy of the Meetup Event JSON
         ],
       },
       created() {
-        console.log( 'THIS FAR 1');
+        console.log("THIS FAR 1");
         fetch("./hacklafayette.json")
           .then((response) => response.json())
           .then((json) => {
             this.data = json;
-            console.log( 'THIS FAR 2');
+            console.log("THIS FAR 2");
             console.dir(this.data);
 
             // this.data.length = 4;
