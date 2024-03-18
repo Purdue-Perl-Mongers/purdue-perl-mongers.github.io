@@ -15,4 +15,7 @@ that dynamically-generated via AJAX from the Meetup or statically with templates
 20190909 DAJ Removed Google Plus link.
 20200612 DAJ Moved our primary (only) branch to `trunk`, which might become
              the default for Git and related tools in the future
+20240318 DAJ Setting up on new host
 ```
+
+
