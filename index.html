@@ -243,9 +243,10 @@ This is automated with Vue, munging a copy of the Meetup Event JSON
         fetch("./hacklafayette.json")
           .then((response) => response.json())
           .then((json) => {
-            this.data = json;
             console.log("THIS FAR 2");
-            console.dir(this.data);
+            console.log(json);
+            // this.data = json;
+            // console.log(this.data);
 
             // this.data.length = 4;
             // for (let i = 0; i < this.data.length; i++) {
