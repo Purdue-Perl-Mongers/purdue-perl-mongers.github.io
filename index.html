@@ -240,11 +240,16 @@ This is automated with Vue, munging a copy of the Meetup Event JSON
       },
       created() {
         console.log("THIS FAR 1");
-        fetch("./hacklafayette.json")
+        fetch("./hacklafayette.json",
+          method: 'POST'
+        )
           .then((response) => response.json())
           .then((json) => {
             console.log("THIS FAR 2");
             console.log(json);
+            console.log("THIS FAR 2");
+            console.dir(json[0]);
+            console.log("THIS FAR 2");
             // this.data = json;
             // console.log(this.data);
 
